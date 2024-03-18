@@ -1,0 +1,210 @@
+<mvc:View controllerName="com.demo.layouts.layouts.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:c="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+        <content>
+         <!-- this is the Grid Layout -->
+        <Panel headerText="Employee Information Grid Layout" expandable="true" expanded="true">
+        <l:Grid id="Grid" defaultSpan="L6 M6" vSpacing="0">
+            <l:content>
+            <Label text="Employee ID" class="sapUiTinyMarginTop" ></Label>
+            <Input ></Input>
+            <Label text="Employee Name" class="sapUiTinyMarginTop"></Label>
+            <Input ></Input>
+            <Label text="Employee Designation" class="sapUiTinyMarginTop"></Label>
+            <Input ></Input>
+            <Label text="Employee Skill" class="sapUiTinyMarginTop"></Label>
+            <Input ></Input>
+            <Label text="Employee Email" class="sapUiTinyMarginTop"></Label>
+            <Input ></Input>
+            </l:content>
+        </l:Grid>
+        </Panel>
+        <Panel headerText="Employee Information Grid 2 field" expandable="true" >
+        <l:Grid id="Grid1" defaultSpan="L3 M3" vSpacing="0">
+            <l:content>
+            <Label text="Employee ID" class="sapUiTinyMarginTop"></Label>
+            <Input ></Input>
+            <Label text="Employee Name" class="sapUiTinyMarginTop"></Label>
+            <Input ></Input>
+            <Label text="Employee Designation" class="sapUiTinyMarginTop"></Label>
+            <Input ></Input>
+            <Label text="Employee Skill" class="sapUiTinyMarginTop"></Label>
+            <Input ></Input>
+            <Label text="Employee Email" class="sapUiTinyMarginTop"></Label>
+            <Input ></Input>
+            </l:content>
+        </l:Grid>
+        </Panel>
+        <Panel headerText="Employee Information Zigzag" expandable="true" >
+        <l:Grid id="Grid2"  vSpacing="0">
+            <l:content>
+            <Label text="Employee ID" class="sapUiTinyMarginTop">
+            <layoutData>
+            <l:GridData span="L3 M3"></l:GridData>
+            </layoutData>
+            </Label>
+            <Input >
+            <layoutData>
+            <l:GridData span="L9 M9"></l:GridData>
+            </layoutData>
+            </Input>
+            <Label text="Employee Name" class="sapUiTinyMarginTop"></Label>
+            <Input ></Input>
+            <Label text="Employee Designation" class="sapUiTinyMarginTop">
+            <layoutData>
+            <l:GridData span="L3 M3"></l:GridData>
+            </layoutData>
+            </Label>
+            <Input ></Input>
+            <Label text="Employee Skill" class="sapUiTinyMarginTop">
+            <layoutData>
+            <l:GridData span="L2 M2"></l:GridData>
+            </layoutData>
+            
+            </Label>
+            <Input >
+            <layoutData>
+            <l:GridData span="L2 M2"></l:GridData>
+            </layoutData>
+            
+            </Input>
+            <Label text="Employee Email" class="sapUiTinyMarginTop">
+            <layoutData>
+            <l:GridData span="L2 M2"></l:GridData>
+            </layoutData>
+            </Label>
+            <Input >
+            <layoutData>
+            <l:GridData span="L2 M2"></l:GridData>
+            </layoutData>
+            </Input>
+             <Label text="Employee Phone Number" class="sapUiTinyMarginTop">
+            <layoutData>
+            <l:GridData span="L2 M2"></l:GridData>
+            </layoutData>
+            </Label>
+            <Input >
+            <layoutData>
+            <l:GridData span="L2 M2"></l:GridData>
+            </layoutData>
+            </Input>
+            </l:content>
+        </l:Grid>
+        </Panel>
+        <!-- Simple form layout starts here  -->
+        <f:SimpleForm title="Employee info Simple Form" editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="7" emptySpanM="7" >
+        <f:content>
+        <Label text="Employee Id"></Label>
+        <Input ></Input>
+        <Label text="Name"></Label>
+        <Input ></Input>
+        <Label text="Designation"></Label>
+        <Input ></Input>
+        
+        <Label text="Skill"></Label>
+        <Input ></Input>
+        <Label text="Email ID"></Label>
+        <Input ></Input>
+        <Label text="Phone No"></Label>
+        <Input ></Input>
+
+        </f:content>
+        </f:SimpleForm>
+
+        <!-- This is for Simple form grouping -->
+        <f:SimpleForm title="Employee info Simple Form Grouping" editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="0" emptySpanM="0" 
+        columnsL="3" columnsM="3">
+        <f:content>
+        <c:Title text="Basic Info"></c:Title>
+        <Label text="Employee Id"></Label>
+        <Input ></Input>
+        <Label text="Name"></Label>
+        <Input ></Input>
+        <Label text="Designation"></Label>
+        <Input ></Input>
+
+        <c:Title text="Skill Info"></c:Title>
+        <Label text="Skill"></Label>
+        <Input ></Input>
+
+        <c:Title text="Contact Info"></c:Title>
+        <Label text="Email ID"></Label>
+        <Input ></Input>
+        <Label text="Phone No"></Label>
+        <Input ></Input>
+
+        </f:content>
+        </f:SimpleForm>
+
+        <VBox >
+            <Button text="vbox demo1"></Button>
+            <Button text="vbox demo2"></Button>
+            <Button text="vbox demo3"></Button>
+        </VBox>
+        <HBox >
+            <Button text="hbox demo1"></Button>
+            <Button text="hbox demo2"></Button>
+            <Button text="hbox demo3"></Button>
+        </HBox>
+
+        <HBox  class="sapUiMediumMargin">
+        <VBox >
+        <Label text= "Employee ID"></Label>
+        <Input ></Input>
+        </VBox>
+        <VBox >
+        <Label text= "Employee name"></Label>
+        <Input ></Input>
+        </VBox>
+        </HBox>
+
+        <FlexBox  justifyContent="Start">
+        <Button text="Go" type="Accept"></Button>
+        <Button text="Reset" type="Reject" class="sapUiTinyMarginBegin"></Button>
+        
+        </FlexBox>
+        <FlexBox  justifyContent="Center" alignItems="Center" height="100%">
+        <Button text="Go" type="Accept"></Button>
+        <Button text="Reset" type="Reject" class="sapUiTinyMarginBegin"></Button>
+        </FlexBox>
+        <FlexBox  justifyContent="End">
+        <Button icon="sap-icon://accept" text="Go" type="Accept"></Button>
+        <Button icon="sap-icon://reset" text="Reset" type="Reject" class="sapUiTinyMarginBegin"></Button>
+        </FlexBox>
+
+        <ObjectHeader icon="sap-icon://employee" title="Sivamanikanta" number="1500000" numberUnit="INR" backgroundDesign="Solid">
+        <attributes>
+        <ObjectAttribute title="Employee ID" text="100001"></ObjectAttribute>
+        <ObjectAttribute title="Designation" text="Senior Analyst"></ObjectAttribute>
+        </attributes>
+        <statuses>
+        <ObjectStatus text="PERMINANT" state="Success"></ObjectStatus>
+        </statuses>
+        </ObjectHeader>
+        <IconTabBar >
+        <items>
+            <IconTabFilter icon="sap-icon://information">
+            <f:SimpleForm editable="false">
+                <f:content>
+                <Label text="Employee ID"></Label>
+                <Text text="100001"></Text>
+                <Label text="Employee Name"></Label>
+                <Text text="Sivamanikanta"></Text>
+                <Label text="Designation"></Label>
+                <Text text="Senior Analyst"></Text>
+                </f:content>
+            </f:SimpleForm>
+            </IconTabFilter>
+             <IconTabFilter icon="sap-icon://notes">
+            <Text text="I'm notes tab"></Text>
+            </IconTabFilter>
+             <IconTabFilter icon="sap-icon://attachment">
+            <Text text="I'm attachment tab"></Text>
+            </IconTabFilter>
+        </items>
+        </IconTabBar>
+
+        </content>
+    </Page>
+</mvc:View>
